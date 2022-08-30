@@ -17,6 +17,17 @@ const showList = (arr) => {
   }
 };
 
+function filterBtn() {
+  const dontAccept = document.getElementById("dontAccept");
+  
+  dontAccept.addEventListener("click", () => {
+    let newArray = people.filter((element) => element.age >= 23);
+
+    showList(newArray);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   showList(people);
+  filterBtn();
 });
