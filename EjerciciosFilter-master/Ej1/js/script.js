@@ -22,7 +22,7 @@ function filterArray(arr){ // esto es lo mismo que "array.filter(elemnt => typeo
   let newArray = [];
 
   // Iteramos el arreglo y comparamos el tipo de dato para agregarlo al nuevo arreglo
-  for (element of arr){
+  for (let element of arr){
     if(typeof element === 'string'){
       newArray.push(element);
     }
@@ -40,7 +40,7 @@ function listarElemento() {
   //console.log(listArray);
 
   // Listamos los elementos del listArray en la lista del html
-  for (element of listArray){
+  for (let element of listArray){
     list.innerHTML += `<li>${element}</li>`;
   }
 }
