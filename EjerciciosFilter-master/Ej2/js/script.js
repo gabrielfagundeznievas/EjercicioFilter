@@ -17,17 +17,17 @@ const showList = (arr) => {
   }
 };
 
-function filterBtn() {
-  const dontAccept = document.getElementById("dontAccept");
+function filterBtn() { // Funcion para llamar en el contentLoaded
+  const dontAccept = document.getElementById("dontAccept"); // constante para llamar al boton
   
-  dontAccept.addEventListener("click", () => {
-    let newArray = people.filter((element) => element.age >= 23);
+  dontAccept.addEventListener("click", () => { // evento clic en el boton y funcion asignada para ejecutarse con el click
+    let newArray = people.filter((element) => element.age >= 23); // crear un nuevo arreglo que filtre los elementos de people segun la edad
 
-    showList(newArray);
+    showList(newArray); // listar los elementos de ese nuevo arreglo con la funcion dada en el ejercicio
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   showList(people);
-  filterBtn();
+  filterBtn();// Llamar a la funcion para que se ejecute el filtro de la lista
 });
